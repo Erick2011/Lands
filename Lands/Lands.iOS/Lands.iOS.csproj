@@ -157,4 +157,19 @@
       <Name>Lands</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\inst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fb.png" />
+  </ItemGroup>
 </Project>
