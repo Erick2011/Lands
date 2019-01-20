@@ -7,18 +7,13 @@
         <ScrollView
             BindingContext="{Binding Login}">
             <StackLayout
-            Padding="10,20,10,5">
-                <Label
-                FontSize="Large"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                Text="Lands" />
+            Padding="5">
                 <Image
-                WidthRequest="120"
-                Source="world">
+                    WidthRequest="200"
+                    Source="world">
                 </Image>
                 <Grid
-                Margin="10,0">
+                    Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
@@ -32,6 +27,7 @@
                         Grid.Row="0"
                         Grid.Column="1"                    
                         Placeholder="Enter your email"
+                        VerticalOptions="Center"
                         Keyboard="Email"
                         Text="{Binding Email, Mode=TwoWay}">
                     </Entry>
@@ -46,6 +42,7 @@
                         Grid.Column="1" 
                         Placeholder="Enter your password"
                         IsPassword="True"
+                        VerticalOptions="Center"
                         Text="{Binding Password, Mode=TwoWay}">
                     </Entry>
                 </Grid>
@@ -54,23 +51,31 @@
                     IsRunning="{Binding IsRunning, Mode=TwoWay}">
                 </ActivityIndicator>
                 <StackLayout
-                Orientation="Horizontal">
+                    Margin="10,0"
+                    Orientation="Horizontal">
                     <Label 
-                    VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand"
-                    FontAttributes="Bold"
-                    Text="Remember me in this device"/>
+                        VerticalOptions="Center"
+                        HorizontalOptions="StartAndExpand"
+                        FontAttributes="Bold"
+                        Text="Remember me on this device"/>
                     <Switch
                         HorizontalOptions="End"
                         IsToggled="{Binding IsRemembered,Mode=TwoWay}"/>
                 </StackLayout>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Forgot your password?"
+                    TextColor="Blue">
+                </Label>
                 <StackLayout
+                    Orientation="Horizontal"
                 Margin="40,0">
                     <Button
                         BackgroundColor="Navy"
                         HeightRequest="46"
                         BorderRadius="23"
                         TextColor="White"
+                        HorizontalOptions="FillAndExpand"
                         Text="Login"
                         Command="{Binding LoginCommand}"
                         IsEnabled="{Binding isEnabled, Mode=TwoWay}">
@@ -80,6 +85,7 @@
                         HeightRequest="46"
                         BorderRadius="23"
                         TextColor="White"
+                        HorizontalOptions="FillAndExpand"
                         Text="Register"
                         IsEnabled="{Binding isEnabled, Mode=TwoWay}">
                     </Button>
